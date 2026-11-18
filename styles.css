@@ -326,8 +326,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: max(260%, 240px);
-  height: max(260%, 240px);
+  width: max(280%, 260px);
   aspect-ratio: 1 / 1;
   background: conic-gradient(
     from 0deg,
@@ -343,6 +342,12 @@ body {
   animation: rgb-border-rotate 2.1s linear infinite;
   transform-origin: center center;
   will-change: transform;
+}
+
+/* Automatic ambient RGB perimeter glow on interactive buttons & video cards (Desktop & Mobile) */
+.interactive-light-btn .rgb-perimeter-glow,
+.video-light-card > .rgb-perimeter-glow {
+  opacity: 0.78;
 }
 
 .orbit-glass-card .rgb-perimeter-glow,
@@ -364,21 +369,6 @@ body {
 .rgb-clickable:active .rgb-perimeter-glow,
 .rgb-clickable.rgb-burst .rgb-perimeter-glow {
   opacity: 1;
-}
-
-/* Keep RGB perimeter lights continuously alive on touch devices */
-@media (hover: none), (pointer: coarse) {
-  .interactive-light-btn .rgb-perimeter-glow,
-  .video-light-card > .rgb-perimeter-glow {
-    opacity: 0.72;
-  }
-  .interactive-light-btn:active .rgb-perimeter-glow,
-  .interactive-light-btn.rgb-burst .rgb-perimeter-glow,
-  .video-light-card:active > .rgb-perimeter-glow,
-  .video-light-card.rgb-burst > .rgb-perimeter-glow,
-  .video-light-card.video-is-playing > .rgb-perimeter-glow {
-    opacity: 1;
-  }
 }
 
 .orbit-center-portrait .rgb-perimeter-glow,
