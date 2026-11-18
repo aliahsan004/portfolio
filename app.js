@@ -3,13 +3,16 @@
     name: 'Ali Ahsan',
     profileImages: [
       './assets/profile.png',
+      './profile.png',
       './assets/profile.jpg',
+      './profile.jpg',
       './assets/aistudio/profile_260087cf_260087cf.png',
       './assets/aistudio/profile_260087cf_260087cf.jpg',
       '../public/assets/aistudio/profile_260087cf_260087cf.png',
     ],
     orbitPortraitSources: [
       './assets/orbit-portrait.png',
+      './orbit-portrait.png',
       './assets/aistudio/Pensive_Portrait_Among_Ferns_55becde6_55becde6.png',
       '../public/assets/aistudio/Pensive_Portrait_Among_Ferns_55becde6_55becde6.png',
     ],
@@ -19,6 +22,7 @@
         name: 'Adobe Premiere Pro',
         sources: [
           './assets/premiere.png',
+          './premiere.png',
           './assets/aistudio/pngwing.com__2__fe0da38e_fe0da38e.png',
           '../public/assets/aistudio/pngwing.com__2__fe0da38e_fe0da38e.png',
         ],
@@ -28,6 +32,7 @@
         name: 'Adobe After Effects',
         sources: [
           './assets/after-effects.png',
+          './after-effects.png',
           './assets/aistudio/pngwing.com__1__a0731328_a0731328.png',
           '../public/assets/aistudio/pngwing.com__1__a0731328_a0731328.png',
         ],
@@ -37,6 +42,7 @@
         name: 'Adobe Photoshop',
         sources: [
           './assets/photoshop.png',
+          './photoshop.png',
           './assets/aistudio/pngwing.com_a6f271ee_a6f271ee.png',
           '../public/assets/aistudio/pngwing.com_a6f271ee_a6f271ee.png',
         ],
@@ -46,6 +52,7 @@
         name: 'Adobe Illustrator',
         sources: [
           './assets/illustrator.png',
+          './illustrator.png',
           './assets/aistudio/pngwing.com__3__4e43089c_4e43089c.png',
           '../public/assets/aistudio/pngwing.com__3__4e43089c_4e43089c.png',
         ],
@@ -55,6 +62,7 @@
         name: 'CapCut',
         sources: [
           './assets/capcut.png',
+          './capcut.png',
           './assets/aistudio/capcut-icon_e669bbd3_e669bbd3.png',
           '../public/assets/aistudio/capcut-icon_e669bbd3_e669bbd3.png',
         ],
@@ -65,6 +73,7 @@
         name: 'Canva',
         sources: [
           './assets/canva.png',
+          './canva.png',
           './assets/aistudio/pngwing.com__4__a9773094_a9773094.png',
           '../public/assets/aistudio/pngwing.com__4__a9773094_a9773094.png',
         ],
@@ -213,16 +222,22 @@
 
   // Helpers
   function attachImageFallback(imgEl, sources, onAllFailed) {
+    if (!imgEl || !sources || !sources.length) return;
     let idx = 0;
-    imgEl.src = sources[0];
-    imgEl.addEventListener('error', () => {
+    const advance = () => {
       idx += 1;
       if (idx < sources.length) {
         imgEl.src = sources[idx];
       } else if (typeof onAllFailed === 'function') {
         onAllFailed(imgEl);
       }
-    });
+    };
+    imgEl.addEventListener('error', advance);
+    if (imgEl.getAttribute('src') === sources[0] && imgEl.complete && imgEl.naturalWidth === 0) {
+      advance();
+    } else if (imgEl.getAttribute('src') !== sources[0]) {
+      imgEl.src = sources[0];
+    }
   }
 
   function triggerRgbBurst(el) {
@@ -258,6 +273,7 @@
 
   // Global interactive spotlight + touch RGB burst
   document.addEventListener('pointermove', (e) => {
+    if (e.pointerType && e.pointerType !== 'mouse') return;
     const target = e.target.closest('.interactive-light-btn, .video-light-card, .ios-liquid-glass, .ios-glass-card');
     if (!target) return;
     if (target.classList.contains('interactive-light-btn')) {
@@ -270,6 +286,7 @@
   });
 
   document.addEventListener('pointerout', (e) => {
+    if (e.pointerType && e.pointerType !== 'mouse') return;
     const target = e.target.closest('.interactive-light-btn, .video-light-card, .ios-liquid-glass, .ios-glass-card');
     if (target && !target.contains(e.relatedTarget)) {
       resetPointerSpotlight(target);
@@ -796,6 +813,7 @@
       });
 
       card.addEventListener('pointermove', (e) => {
+        if (e.pointerType && e.pointerType !== 'mouse') return;
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
