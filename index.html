@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Ahsan | Video Editor &amp; Motion Graphics Designer</title>
+    <meta
+      name="description"
+      content="Portfolio of Ali Ahsan - Video Editor & Motion Graphics Designer. Cinematic storytelling, precision pacing, and dynamic short-form edits."
+    />
+    <meta property="og:title" content="Ali Ahsan | Video Editor &amp; Motion Graphics Designer" />
+    <meta
+      property="og:description"
+      content="Portfolio of Ali Ahsan - Video Editor & Motion Graphics Designer. Cinematic storytelling, precision pacing, and dynamic short-form edits."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['Syne', 'sans-serif'],
+              body: ['"Plus Jakarta Sans"', '"Hind Siliguri"', 'sans-serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+            },
+            colors: {
+              noir: {
+                950: '#060608',
+                900: '#0b0b0f',
+                850: '#121217',
+                800: '#191921',
+                700: '#262633',
+                600: '#38384a',
+                gold: '#e5a338',
+                amber: '#f59e0b'
+              }
+            }
+          }
+        }
+      };
+    </script>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div
+      id="scroll-stage"
+      data-fast-scroll="false"
+      class="min-h-screen flex flex-col text-stone-100 selection:bg-noir-gold selection:text-noir-950 antialiased overflow-x-clip pt-11 sm:pt-[60px] relative"
+    >
+      <!-- Global Chromatic Dark Background -->
+      <div aria-hidden="true" class="site-chromatic-bg pointer-events-none fixed inset-0 z-0 overflow-hidden">
+        <div class="absolute -top-24 -left-16 w-[300px] h-[300px] sm:w-[540px] sm:h-[540px] rounded-full bg-amber-400/[0.11] blur-[120px] sm:blur-[155px]"></div>
+        <div class="absolute top-[18%] -right-20 w-[280px] h-[280px] sm:w-[520px] sm:h-[520px] rounded-full bg-blue-500/[0.12] blur-[120px] sm:blur-[155px]"></div>
+        <div class="absolute top-[52%] -left-16 w-[280px] h-[280px] sm:w-[500px] sm:h-[500px] rounded-full bg-red-500/[0.10] blur-[125px] sm:blur-[160px]"></div>
+        <div class="absolute bottom-[-60px] right-[10%] w-[260px] h-[260px] sm:w-[480px] sm:h-[480px] rounded-full bg-emerald-500/[0.08] blur-[125px] sm:blur-[160px]"></div>
+        <div class="absolute bottom-[18%] left-[32%] w-[220px] h-[220px] sm:w-[400px] sm:h-[400px] rounded-full bg-yellow-500/[0.07] blur-[130px] sm:blur-[165px]"></div>
+      </div>
+
+      <!-- Fast-Scroll Speed Streaks Overlay -->
+      <div aria-hidden="true" class="scroll-speed-overlay pointer-events-none fixed inset-0 z-20"></div>
+
+      <!-- =======================================================
+           FLOATING iPHONE LIQUID GLASS HEADER
+           ======================================================= -->
+      <header class="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+        <div class="max-w-7xl mx-auto px-1.5 sm:px-6 lg:px-8 h-11 sm:h-[60px] flex items-center w-full relative">
+          <!-- Fixed Corner Target for Diagonal Hero Avatar Dock -->
+          <div
+            aria-hidden="true"
+            class="pointer-events-none absolute left-1.5 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 pl-0.5 py-0.5 sm:pl-1.5 sm:py-1.5 flex items-center"
+          >
+            <div id="header-corner-anchor" class="w-5 h-5 sm:w-7 sm:h-7 rounded-full"></div>
+          </div>
+
+          <div class="flex items-center justify-between gap-1 sm:gap-4 w-full min-w-0">
+            <!-- Left Spacer (when at top) -->
+            <div id="nav-left-spacer" class="flex-1 min-w-0" aria-hidden="true"></div>
+
+            <!-- Left Brand Pill (shown on scroll) -->
+            <a
+              id="header-brand"
+              href="#home"
+              style="opacity: 0"
+              class="hidden rgb-clickable ios-liquid-glass ios-glass-sheen pointer-events-auto items-center gap-1 sm:gap-2.5 pl-0.5 pr-1.5 py-0.5 sm:pl-1.5 sm:pr-3.5 sm:py-1.5 rounded-full group shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+            >
+              <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+              <div class="w-5 h-5 sm:w-7 sm:h-7 rounded-full overflow-hidden border-[1.5px] border-noir-gold bg-stone-900 shadow-md shrink-0 relative z-10">
+                <img
+                  id="header-avatar-img"
+                  src="./assets/profile.png"
+                  alt="Ali Ahsan"
+                  decoding="async"
+                  class="w-full h-full object-cover object-center translate-y-[14%] scale-[1.22] rounded-full"
+                />
+              </div>
+              <span class="font-display font-bold text-[8px] min-[375px]:text-[8.5px] min-[400px]:text-[9.5px] sm:text-sm tracking-tight text-white group-hover:text-noir-gold transition-colors whitespace-nowrap shrink-0 relative z-10">
+                Ali Ahsan
+              </span>
+            </a>
+
+            <!-- Elastic Center Spacer (shown on scroll) -->
+            <div id="nav-mid-spacer" class="hidden flex-1 min-w-0" aria-hidden="true"></div>
+
+            <!-- Primary Liquid Glass Capsule -->
+            <nav
+              id="primary-nav"
+              aria-label="Primary navigation"
+              class="ios-liquid-glass ios-glass-sheen pointer-events-auto flex items-center gap-0.5 sm:gap-1.5 px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-full text-[10.5px] min-[390px]:text-[11.5px] sm:text-sm font-medium text-stone-200 max-w-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden shrink transition-all duration-200"
+            >
+              <a
+                href="#home"
+                data-nav-href="#home"
+                class="glass-nav-item relative z-10 px-1.5 py-0.5 min-[390px]:px-2 sm:px-3 sm:py-1.5 rounded-full whitespace-nowrap shrink-0 bg-white/15 text-noir-gold shadow-[0_0_16px_rgba(229,163,56,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+              >
+                <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                <span class="relative z-10" data-i18n="navHome">Home</span>
+              </a>
+              <a
+                href="#featured"
+                data-nav-href="#featured"
+                class="glass-nav-item relative z-10 px-1.5 py-0.5 min-[390px]:px-2 sm:px-3 sm:py-1.5 rounded-full whitespace-nowrap shrink-0 text-stone-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+              >
+                <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                <span class="relative z-10" data-i18n="navFeatured">Featured</span>
+              </a>
+              <a
+                href="#videos"
+                data-nav-href="#videos"
+                class="glass-nav-item relative z-10 px-1.5 py-0.5 min-[390px]:px-2 sm:px-3 sm:py-1.5 rounded-full whitespace-nowrap shrink-0 text-stone-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+              >
+                <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                <span class="relative z-10" data-i18n="navPortfolio">Portfolio</span>
+              </a>
+              <a
+                href="#about"
+                data-nav-href="#about"
+                class="glass-nav-item relative z-10 px-1.5 py-0.5 min-[390px]:px-2 sm:px-3 sm:py-1.5 rounded-full whitespace-nowrap shrink-0 text-stone-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+              >
+                <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                <span class="relative z-10" data-i18n="navAbout">About</span>
+              </a>
+              <a
+                href="#contact"
+                data-nav-href="#contact"
+                class="glass-nav-item relative z-10 px-1.5 py-0.5 min-[390px]:px-2 sm:px-3 sm:py-1.5 rounded-full whitespace-nowrap shrink-0 text-stone-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+              >
+                <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                <span class="relative z-10" data-i18n="navContact">Contact</span>
+              </a>
+
+              <button
+                id="lang-toggle-btn"
+                type="button"
+                aria-label="Toggle language"
+                class="glass-nav-item relative z-10 inline-flex items-center gap-1 px-2 py-0.5 sm:px-2.5 sm:py-1.5 rounded-full border border-white/20 bg-white/10 text-[10.5px] min-[390px]:text-[11.5px] sm:text-xs font-mono font-bold text-white hover:border-noir-gold hover:text-noir-gold whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+              >
+                <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                <svg class="relative z-10 w-3 h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
+                </svg>
+                <span id="lang-switch-label" class="relative z-10">BN</span>
+              </button>
+            </nav>
+
+            <!-- Right Spacer (only when at top) -->
+            <div id="nav-right-spacer" class="flex-1 min-w-0" aria-hidden="true"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- =======================================================
+           MAIN CONTENT AREA
+           ======================================================= -->
+      <main id="home" class="relative z-10 flex-1 scroll-mt-24">
+        <!-- 1. HERO SECTION -->
+        <section class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-6 sm:pt-14 pb-12 sm:pb-28">
+          <div class="flex flex-col items-center justify-center text-center mb-10 sm:mb-20">
+            <!-- Hero Portrait Slot -->
+            <div id="hero-avatar-slot" class="mb-4 sm:mb-6 relative w-36 h-36 sm:w-52 sm:h-52 lg:w-60 lg:h-60 z-40">
+              <div id="hero-avatar-glide" class="relative w-full h-full will-change-transform origin-center">
+                <div aria-hidden="true" class="hero-rim-halo absolute -inset-2 sm:-inset-3 rounded-full blur-xl opacity-45"></div>
+                <button
+                  id="hero-portrait-btn"
+                  type="button"
+                  aria-label="View full photo of Ali Ahsan"
+                  class="rgb-clickable relative w-full h-full rounded-full overflow-hidden border-[3px] sm:border-4 border-noir-gold p-0.5 sm:p-1 bg-stone-900 shadow-2xl cursor-pointer transition-transform duration-500 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+                >
+                  <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                  <img
+                    id="hero-avatar-img"
+                    src="./assets/profile.png"
+                    alt="Ali Ahsan - Video Editor & Motion Graphics Designer"
+                    decoding="async"
+                    class="w-full h-full object-cover object-center translate-y-[14%] scale-[1.22] rounded-full"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <h1 class="scroll-echo-text lighting-text-hover font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white text-balance">
+              Ali Ahsan
+            </h1>
+
+            <p id="hero-role" class="mt-2 sm:mt-3 text-lg sm:text-2xl font-semibold text-noir-gold tracking-wide">
+              Video Editor &amp; Motion Graphics Designer
+            </p>
+            <p id="hero-availability" class="mt-1.5 sm:mt-2 text-sm font-mono text-stone-400">
+              Available for Projects
+            </p>
+
+            <div class="mt-6 sm:mt-8 flex items-center justify-center gap-3 sm:gap-4">
+              <a
+                href="#featured"
+                class="interactive-light-btn brand-btn-email px-5 py-3 sm:px-7 sm:py-3.5 rounded-xl sm:rounded-2xl font-bold text-sm bg-noir-gold text-noir-950 hover:bg-noir-amber transition-all shadow-md whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+              >
+                <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                <span class="relative z-10" data-i18n="btnWatchFeatured">Watch Featured Video ↓</span>
+              </a>
+              <a
+                href="#contact"
+                class="interactive-light-btn ios-liquid-glass px-5 py-3 sm:px-7 sm:py-3.5 rounded-xl sm:rounded-2xl font-bold text-sm text-stone-100 hover:border-noir-gold transition-all whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+              >
+                <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                <span class="relative z-10" data-i18n="btnContactMe">Contact Me</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. FEATURED VIDEO SECTION -->
+          <div id="featured" class="scroll-mt-24 pt-5 sm:pt-6 border-t border-white/10">
+            <div class="flex items-end justify-between gap-2 sm:gap-4 mb-3.5 sm:mb-5">
+              <div class="min-w-0">
+                <p id="featured-kicker" class="font-mono text-xs text-noir-gold mb-1 truncate">
+                  Featured Showreel · 16:9 Cinema · 4K Master
+                </p>
+                <h2 id="featured-heading" class="scroll-echo-text lighting-text-hover font-display font-extrabold text-2xl sm:text-3xl text-white">
+                  Featured Video
+                </h2>
+              </div>
+              <a
+                href="https://youtu.be/6C86gUGVa9E?si=W84CPHw-lmbYz1yZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="rgb-clickable relative overflow-hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-mono text-stone-400 hover:text-noir-gold transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+              >
+                <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                <span class="relative z-10" data-i18n="openOriginal">Open original</span>
+                <svg class="relative z-10 w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 3h6v6"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div
+              id="featured-video-card"
+              class="video-light-card ios-glass-sheen group relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/15 aspect-video"
+            >
+              <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+              <div id="featured-video-mount" class="w-full h-full"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. PORTFOLIO GRID SECTION -->
+        <section id="videos" class="scroll-mt-24 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-12 sm:py-28 border-t border-white/10">
+          <div class="text-center max-w-2xl mx-auto mb-7 sm:mb-12">
+            <p id="portfolio-kicker" class="font-mono text-xs text-noir-gold mb-1.5 sm:mb-2">
+              Timeline Archive · Section 02
+            </p>
+            <h2 id="portfolio-heading" class="scroll-echo-text lighting-text-hover font-display font-extrabold text-[26px] sm:text-4xl text-white text-balance">
+              Selected Video Edits (6 Cuts)
+            </h2>
+            <p id="portfolio-hint" class="mt-1.5 sm:mt-2 text-sm text-stone-400 font-mono">
+              Click any thumbnail to play instantly
+            </p>
+          </div>
+
+          <div id="shorts-grid" class="scroll-motion-subject grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6 lg:gap-10"></div>
+        </section>
+
+        <!-- 3.5. BEHANCE GRAPHIC DESIGN SHOWCASE -->
+        <section class="max-w-5xl mx-auto px-3 sm:px-6 lg:px-8 pb-12 sm:pb-24">
+          <a
+            href="https://www.behance.net/aliahsan68"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="interactive-light-btn brand-btn-behance ios-glass-card ios-glass-sheen group relative flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-8 p-5 sm:p-9 lg:p-11 rounded-2xl sm:rounded-3xl cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+          >
+            <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+
+            <div class="relative z-10 flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 sm:gap-7 min-w-0">
+              <div class="scroll-motion-subject brand-icon-behance w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-2xl sm:rounded-[22px] bg-[#1769FF] text-white flex items-center justify-center shadow-[0_14px_34px_rgba(23,105,255,0.45)] border border-white/25 shrink-0 transition-all duration-300">
+                <svg viewBox="0 0 24 24" class="w-9 h-9 sm:w-11 sm:h-11 lg:w-12 lg:h-12 fill-current" aria-hidden="true">
+                  <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
+                </svg>
+              </div>
+
+              <div class="min-w-0 space-y-1.5">
+                <p id="behance-kicker" class="font-mono text-xs text-[#6ea8ff] tracking-wide">
+                  Graphic Design Showcase · Behance Portfolio
+                </p>
+                <h2 id="behance-heading" class="scroll-echo-text lighting-text-hover font-display font-extrabold text-[26px] sm:text-3xl lg:text-4xl text-white tracking-tight text-balance">
+                  See My Graphic Designs
+                </h2>
+                <p id="behance-subtitle" class="text-sm lg:text-base text-stone-300 leading-relaxed max-w-xl">
+                  Want to explore my graphic design work? Thumbnails, posters, brand visuals, and creative layouts are curated on Behance.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative z-10 inline-flex items-center gap-2 px-6 py-3 sm:px-6 sm:py-3.5 rounded-xl sm:rounded-2xl bg-[#1769FF] text-white font-bold text-sm shadow-lg group-hover:bg-[#2979ff] transition-colors whitespace-nowrap shrink-0">
+              <span id="behance-cta">View on Behance</span>
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14 21 3"></path>
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              </svg>
+            </div>
+          </a>
+        </section>
+
+        <!-- 4. ANIMATED ORBIT HERO + ABOUT ME SEAMLESS SCROLL TRANSITION -->
+        <div id="orbit-about-stage" class="relative border-t border-white/10 bg-black/15">
+          <div id="orbit-sticky-track" class="relative z-30 h-[600px] sm:h-[780px] lg:h-[860px] pointer-events-none">
+            <div class="sticky top-12 sm:top-20 h-[460px] sm:h-[580px] lg:h-[640px] flex flex-col items-center justify-center overflow-visible">
+              <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
+                <div
+                  class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-[450px] sm:h-[450px] lg:w-[560px] lg:h-[560px] rounded-full opacity-55"
+                  style="background: radial-gradient(circle, rgba(229, 163, 56, 0.14) 0%, rgba(26, 26, 34, 0.25) 45%, transparent 72%)"
+                ></div>
+              </div>
+
+              <div id="orbit-heading-wrap" class="relative z-30 text-center mb-4 sm:mb-5 px-4 pointer-events-auto">
+                <p id="orbit-kicker" class="lighting-text-hover font-mono text-xs text-noir-gold tracking-wide mb-1 cursor-pointer">
+                  Creative Toolset · Craft &amp; Precision
+                </p>
+                <div>
+                  <h2 id="orbit-heading" class="scroll-echo-text lighting-text-hover font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight text-balance cursor-pointer">
+                    Software &amp; Motion Craft
+                  </h2>
+                </div>
+              </div>
+
+              <div class="orbit-stage-container relative flex items-center justify-center w-[328px] h-[328px] sm:w-[448px] sm:h-[448px] lg:w-[552px] lg:h-[552px]">
+                <!-- Subtle Architectural Orbit Rings -->
+                <div id="orbit-rings" aria-hidden="true" class="pointer-events-none absolute inset-0 flex items-center justify-center">
+                  <div class="w-[264px] h-[264px] sm:w-[368px] sm:h-[368px] lg:w-[460px] lg:h-[460px] rounded-full border border-white/[0.08]"></div>
+                  <div class="absolute w-[202px] h-[202px] sm:w-[286px] sm:h-[286px] lg:w-[356px] lg:h-[356px] rounded-full border border-dashed border-noir-gold/20"></div>
+                </div>
+
+                <!-- Rotating Orbit Wheel with 6 Software Cards -->
+                <div id="orbit-wheel" class="absolute inset-0 z-30 pointer-events-none"></div>
+
+                <!-- Orbit Center Portrait (Glides into About Me) -->
+                <div id="orbit-hero-slot" class="relative w-36 h-36 sm:w-52 sm:h-52 lg:w-64 lg:h-64 shrink-0 z-20 pointer-events-auto">
+                  <div id="orbit-moving-portrait" class="relative w-full h-full will-change-transform origin-center">
+                    <div id="orbit-portrait-halo" aria-hidden="true" class="orbit-portrait-rgb-halo pointer-events-none absolute -inset-2 sm:-inset-3.5 rounded-full blur-xl opacity-60"></div>
+                    <button
+                      id="orbit-portrait-btn"
+                      type="button"
+                      aria-label="View full portrait of Ali Ahsan"
+                      class="orbit-center-portrait rgb-clickable group relative w-full h-full rounded-full overflow-hidden border-2 sm:border-[3px] border-noir-gold/80 bg-noir-900 p-0.5 sm:p-1 cursor-pointer transition-transform duration-300 hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+                    >
+                      <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                      <img
+                        id="orbit-portrait-img"
+                        src="./assets/orbit-portrait.png"
+                        alt="Ali Ahsan"
+                        decoding="async"
+                        class="w-full h-full rounded-full object-cover object-[50%_22%] transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ABOUT ME SECTION -->
+          <section id="about" class="relative z-10 scroll-mt-24 max-w-5xl mx-auto px-3 sm:px-6 lg:px-8 pt-2 sm:pt-6 pb-12 sm:pb-28">
+            <div class="ios-glass-card ios-glass-sheen p-5 sm:p-12 lg:p-14 rounded-2xl sm:rounded-3xl">
+              <div class="relative z-10 flex flex-row items-center justify-center gap-3.5 sm:gap-5 w-full">
+                <div class="shrink-0 flex items-center justify-center">
+                  <div id="about-slot" aria-hidden="true" class="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full border border-noir-gold/25 bg-noir-900/40"></div>
+                </div>
+
+                <div id="about-header-right" class="min-w-0 text-left will-change-transform">
+                  <p id="about-kicker" class="font-mono text-xs text-noir-gold mb-1 sm:mb-1.5">
+                    Philosophy &amp; Story · Section 03
+                  </p>
+                  <h2 id="about-heading" class="scroll-echo-text lighting-text-hover font-display font-extrabold text-[26px] sm:text-4xl lg:text-5xl text-white">
+                    About Me
+                  </h2>
+                </div>
+              </div>
+
+              <div id="about-body" class="scroll-motion-subject relative z-10 mt-6 sm:mt-8 pt-5 sm:pt-7 border-t border-white/10 space-y-3.5 sm:space-y-5 text-stone-300 text-[15px] sm:text-lg leading-relaxed will-change-transform">
+                <p id="bio-intro" class="font-display font-bold text-xl sm:text-2xl lg:text-[28px] text-white tracking-tight leading-snug">
+                  Hello! I'm Ali Ahsan.
+                </p>
+                <p id="bio-p1" class="text-stone-200">
+                  My journey began with a simple curiosity for capturing moments, which quickly evolved into a lifelong obsession.
+                </p>
+
+                <div id="about-more-bio" class="hidden sm:block sm:space-y-5">
+                  <p id="bio-p2">
+                    I believe that every frame should speak, every cut should breathe, and every story should resonate. Whether it's a commercial campaign, a cinematic travel film, or a personal brand story, I bring a unique blend of technical expertise and artistic intuition to the table.
+                  </p>
+                  <p id="bio-p3" class="font-semibold text-noir-gold">
+                    My mission is simple: to create visuals that not only look beautiful but feel authentic.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Focus Areas Grid -->
+              <div
+                id="about-focus-grid"
+                class="hidden sm:grid relative z-10 mt-6 sm:mt-12 pt-6 sm:pt-10 border-t border-white/10 grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6 will-change-transform"
+              ></div>
+
+              <!-- Mobile-Only See More / See Less Button -->
+              <div class="sm:hidden relative z-10 mt-5 flex justify-center">
+                <button
+                  id="about-see-more-btn"
+                  type="button"
+                  aria-expanded="false"
+                  class="rgb-clickable ios-liquid-glass inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-sm font-semibold text-noir-gold border border-noir-gold/40 hover:border-noir-gold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+                >
+                  <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+                  <span id="about-see-more-label" class="relative z-10">See More</span>
+                  <svg id="about-see-more-icon" class="relative z-10 w-4 h-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- 5. CONTACT SECTION -->
+        <section id="contact" class="scroll-mt-24 max-w-5xl mx-auto px-3 sm:px-6 lg:px-8 py-12 sm:py-28 border-t border-white/10">
+          <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-14">
+            <p id="contact-kicker" class="font-mono text-xs text-noir-gold mb-2 sm:mb-3">
+              Get In Touch · Section 04
+            </p>
+            <h2 id="contact-heading" class="scroll-echo-text lighting-text-hover font-display font-extrabold text-[26px] sm:text-5xl text-white text-balance">
+              Let’s Create Something Impactful
+            </h2>
+            <p id="contact-subtitle" class="mt-2.5 sm:mt-4 text-stone-400 text-[15px] sm:text-lg leading-relaxed">
+              Have an upcoming project, content channel, or video editing requirement? Reach out directly through your preferred channel.
+            </p>
+          </div>
+
+          <div id="contact-buttons" class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 max-w-3xl mx-auto"></div>
+        </section>
+      </main>
+
+      <!-- =======================================================
+           FOOTER
+           ======================================================= -->
+      <footer class="relative z-10 mt-auto border-t border-white/10 bg-white/[0.02] backdrop-blur-md py-6 sm:py-10 px-3 sm:px-6 lg:px-8 text-xs text-stone-400 font-mono">
+        <div class="max-w-7xl mx-auto flex flex-row items-center justify-between gap-2 sm:gap-4">
+          <p class="tabular-nums truncate">
+            © <span id="footer-year"></span> Ali Ahsan. <span id="footer-rights">All rights reserved.</span>
+          </p>
+          <div class="flex items-center justify-end gap-1.5 sm:gap-3 shrink-0">
+            <span id="footer-role" class="hidden min-[420px]:inline">Video Editor &amp; Motion Graphics Designer</span>
+            <span class="hidden min-[420px]:inline" aria-hidden="true">·</span>
+            <span id="footer-edition" class="text-noir-gold">Designed by Ali Ahsan</span>
+          </div>
+        </div>
+      </footer>
+
+      <!-- =======================================================
+           MOBILE SHORTS CINEMA MODAL
+           ======================================================= -->
+      <div
+        id="mobile-video-modal"
+        role="dialog"
+        aria-modal="true"
+        class="hidden fixed inset-0 z-[95] bg-black/90 backdrop-blur-xl flex flex-col items-center justify-center p-4"
+      >
+        <div id="mobile-modal-inner" class="w-full max-w-[360px] flex flex-col items-center gap-3">
+          <div class="w-full flex items-center justify-between gap-3 px-1">
+            <div class="min-w-0">
+              <p id="mobile-modal-meta" class="text-[10px] font-mono text-noir-gold truncate"></p>
+              <h3 id="mobile-modal-title" class="font-display font-bold text-sm text-white truncate"></h3>
+            </div>
+            <button
+              id="mobile-modal-close"
+              type="button"
+              aria-label="Close video player"
+              class="rgb-clickable relative overflow-hidden w-9 h-9 rounded-full border border-white/20 bg-white/10 text-white flex items-center justify-center shrink-0 hover:border-noir-gold hover:text-noir-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+            >
+              <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+              <svg class="relative z-10 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            id="mobile-modal-card"
+            class="video-light-card relative w-[86vw] max-w-[350px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/20 bg-noir-950 shadow-[0_24px_80px_rgba(0,0,0,0.95)]"
+          >
+            <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+            <div id="mobile-modal-mount" class="w-full h-full"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =======================================================
+           FULLSCREEN PROFILE PHOTO LIGHTBOX
+           ======================================================= -->
+      <div
+        id="photo-lightbox"
+        role="dialog"
+        aria-modal="true"
+        class="hidden fixed inset-0 z-[100] bg-black/[0.92] backdrop-blur-xl flex flex-col"
+      >
+        <div class="flex items-center justify-between gap-3 px-4 sm:px-8 py-3.5 sm:py-4 border-b border-white/10 bg-black/40">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <img
+              id="lightbox-thumb"
+              src="./assets/profile.png"
+              alt=""
+              class="w-8 h-8 sm:w-9 sm:h-9 rounded-full object-cover object-top border border-noir-gold/80 shrink-0"
+            />
+            <div class="min-w-0">
+              <p class="font-display font-bold text-xs sm:text-sm text-white truncate">Ali Ahsan</p>
+              <p id="lightbox-role" class="text-[10px] sm:text-xs font-mono text-stone-400 truncate">
+                Video Editor &amp; Motion Graphics Designer
+              </p>
+            </div>
+          </div>
+
+          <button
+            id="lightbox-close"
+            type="button"
+            aria-label="Close photo"
+            class="rgb-clickable relative overflow-hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/20 bg-white/10 text-white flex items-center justify-center shrink-0 hover:border-noir-gold hover:text-noir-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-noir-gold"
+          >
+            <span class="rgb-perimeter-glow" aria-hidden="true"></span>
+            <svg class="relative z-10 w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex-1 flex items-center justify-center p-4 sm:p-8 overflow-hidden">
+          <img
+            id="lightbox-img"
+            src="./assets/profile.png"
+            alt="Ali Ahsan"
+            class="max-h-[82vh] max-w-[92vw] w-auto h-auto object-contain rounded-2xl border border-white/15 shadow-[0_28px_90px_rgba(0,0,0,0.95)] select-none"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
